@@ -17,7 +17,8 @@ export default function AboutPage() {
       role: "Director / Co-Founder",
       dept: "Germany Operations & Employer Partnerships",
       email: "shubham.jain@tlhglobalcareers.com",
-      image: "/images/shubham-jain.png"
+      image: "/images/shubham-jain-original.jpg",
+      position: "50% 15%" // Focus on face and shoulders
     },
     {
       name: "Satyajit Patel",
@@ -93,7 +94,14 @@ export default function AboutPage() {
               {team.map((member, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group">
                   <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden relative mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300">
-                    <Image src={member.image} alt={member.name} fill referrerPolicy="no-referrer" className="object-cover" />
+                    <Image 
+                      src={member.image} 
+                      alt={member.name} 
+                      fill 
+                      referrerPolicy="no-referrer" 
+                      className="object-cover"
+                      style={{ objectPosition: (member as any).position || 'center' }}
+                    />
                   </div>
                   <h4 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h4>
                   <p className="text-blue-600 font-semibold text-sm mb-2">{member.role}</p>
