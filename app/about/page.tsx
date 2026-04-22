@@ -8,9 +8,33 @@ export const metadata: Metadata = {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Mail } from "lucide-react";
 
 export default function AboutPage() {
+  const team = [
+    {
+      name: "Shubham Jain",
+      role: "Director / Co-Founder",
+      dept: "Germany Operations & Employer Partnerships",
+      email: "shubham.jain@tlhglobalcareers.com",
+      image: "/images/shubham-jain.png"
+    },
+    {
+      name: "Satyajit Patel",
+      role: "Operations Head / Co-Founder",
+      dept: "Recruitment Operations & Candidate Management",
+      email: "satyajit.patel@tlhglobalcareers.com",
+      image: "/images/satyajit-patel.png"
+    },
+    {
+      name: "Vishant Singh",
+      role: "Growth Manager",
+      dept: "International Partnerships",
+      email: "vishant.singh@tlhglobalcareers.com",
+      image: "/images/vishant-singh.png"
+    }
+  ];
+
   return (
     <>
       <Navbar />
@@ -61,19 +85,24 @@ export default function AboutPage() {
              </div>
           </div>
 
-          {/* Team Placeholder */}
           <div className="bg-slate-50 rounded-[2.5rem] p-10 lg:p-16 text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Meet Our Team</h2>
-            <p className="text-slate-600 mb-12 max-w-2xl mx-auto">Our dedicated consultants, language instructors, and legal experts work tirelessly to ensure your success.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Meet Our Leadership</h2>
+            <p className="text-slate-600 mb-12 max-w-2xl mx-auto">Our dedicated experts work tirelessly to bridge the gap between global talent and German healthcare excellence.</p>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[1,2,3,4].map((i) => (
-                <div key={i} className="text-center">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden relative">
-                    <Image src={`https://ui-avatars.com/api/?name=Team+Member+${i}&size=200&background=random`} alt="Team Member" fill referrerPolicy="no-referrer" className="object-cover" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {team.map((member, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden relative mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <Image src={member.image} alt={member.name} fill referrerPolicy="no-referrer" className="object-cover" />
                   </div>
-                  <h4 className="font-semibold text-slate-900">Name Placeholder</h4>
-                  <p className="text-sm text-slate-500">Consultant role</p>
+                  <h4 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h4>
+                  <p className="text-blue-600 font-semibold text-sm mb-2">{member.role}</p>
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-4 leading-relaxed">{member.dept}</p>
+                  <div className="pt-4 border-t border-slate-50 flex justify-center">
+                    <a href={`mailto:${member.email}`} className="text-slate-400 hover:text-blue-600 transition-colors">
+                      <Mail className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
