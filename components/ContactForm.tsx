@@ -71,57 +71,57 @@ export default function ContactForm({
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-24 relative">
       {/* Background Decor */}
       <div className="absolute inset-0 z-0 bg-slate-50/50">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
               {title}
             </h2>
-            <p className="text-lg text-slate-600 mb-12 max-w-lg leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
               {subtitle}
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
-                  <Mail className="w-6 h-6" />
+            <div className="space-y-6 sm:space-y-8">
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Email Us</p>
-                  <p className="text-xl font-bold text-slate-900">info@tlhglobalcareers.com</p>
+                  <p className="text-[10px] sm:text-sm font-semibold text-slate-400 uppercase tracking-wider">Email Us</p>
+                  <p className="text-base sm:text-xl font-bold text-slate-900">info@tlhglobalcareers.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
-                  <Phone className="w-6 h-6" />
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Call Us</p>
-                  <p className="text-xl font-bold text-slate-900">+91 99874 02157</p>
+                  <p className="text-[10px] sm:text-sm font-semibold text-slate-400 uppercase tracking-wider">Call Us</p>
+                  <p className="text-base sm:text-xl font-bold text-slate-900">+91 99874 02157</p>
                 </div>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl shadow-blue-900/5 border border-slate-100"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 shadow-2xl shadow-blue-900/5 border border-slate-100"
           >
             <AnimatePresence mode="wait">
               {submitStatus === "success" ? (
@@ -130,25 +130,25 @@ export default function ContactForm({
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="text-center py-12"
+                  className="text-center py-8 sm:py-12"
                 >
-                  <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-10 h-10" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Message Sent!</h3>
-                  <p className="text-slate-600 mb-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">Message Sent!</h3>
+                  <p className="text-sm sm:text-slate-600 mb-8">
                     Thank you for reaching out. We&apos;ve received your inquiry and will get back to you shortly.
                   </p>
                   <button
                     onClick={() => setSubmitStatus("idle")}
-                    className="px-8 py-3 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-colors"
+                    className="px-8 py-3 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-colors w-full sm:w-auto"
                   >
-                    Send Another Message
+                    Send Another
                   </button>
                 </motion.div>
               ) : (
-                <form key="form" onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form key="form" onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 ml-1">Full Name</label>
                       <div className="relative">
@@ -156,10 +156,10 @@ export default function ContactForm({
                         <input
                           {...register("name")}
                           placeholder="John Doe"
-                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+                          className="w-full pl-11 pr-4 py-3.5 sm:py-4 bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm sm:text-base"
                         />
                       </div>
-                      {errors.name && <p className="text-xs text-red-500 mt-1 ml-1">{errors.name.message}</p>}
+                      {errors.name && <p className="text-[10px] sm:text-xs text-red-500 mt-1 ml-1">{errors.name.message}</p>}
                     </div>
 
                     <div className="space-y-2">
@@ -169,14 +169,14 @@ export default function ContactForm({
                         <input
                           {...register("email")}
                           placeholder="john@example.com"
-                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+                          className="w-full pl-11 pr-4 py-3.5 sm:py-4 bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm sm:text-base"
                         />
                       </div>
-                      {errors.email && <p className="text-xs text-red-500 mt-1 ml-1">{errors.email.message}</p>}
+                      {errors.email && <p className="text-[10px] sm:text-xs text-red-500 mt-1 ml-1">{errors.email.message}</p>}
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
                       <div className="relative">
@@ -184,17 +184,17 @@ export default function ContactForm({
                         <input
                           {...register("phone")}
                           placeholder="+1 (555) 000-0000"
-                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+                          className="w-full pl-11 pr-4 py-3.5 sm:py-4 bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm sm:text-base"
                         />
                       </div>
-                      {errors.phone && <p className="text-xs text-red-500 mt-1 ml-1">{errors.phone.message}</p>}
+                      {errors.phone && <p className="text-[10px] sm:text-xs text-red-500 mt-1 ml-1">{errors.phone.message}</p>}
                     </div>
 
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 ml-1">I am a...</label>
                       <select
                         {...register("userType")}
-                        className="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all appearance-none cursor-pointer"
+                        className="w-full px-4 py-3.5 sm:py-4 bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all appearance-none cursor-pointer text-sm sm:text-base"
                       >
                         <option value="candidate">Healthcare Professional</option>
                         <option value="employer">Employer / Hospital</option>
@@ -209,36 +209,36 @@ export default function ContactForm({
                       <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-slate-400" />
                       <textarea
                         {...register("message")}
-                        rows={4}
+                        rows={3}
                         placeholder="Tell us how we can help you..."
-                        className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all resize-none"
+                        className="w-full pl-11 pr-4 py-3.5 sm:py-4 bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all resize-none text-sm sm:text-base"
                       ></textarea>
                     </div>
-                    {errors.message && <p className="text-xs text-red-500 mt-1 ml-1">{errors.message.message}</p>}
+                    {errors.message && <p className="text-[10px] sm:text-xs text-red-500 mt-1 ml-1">{errors.message.message}</p>}
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-5 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-0.5 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                    className="w-full py-4 sm:py-5 bg-blue-600 text-white rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-0.5 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="w-6 h-6 animate-spin" />
+                        <Loader2 className="w-5 h-5 sm:w-6 sm:h-6 animate-spin" />
                         Sending...
                       </>
                     ) : (
                       <>
                         Send Message
-                        <Send className="w-5 h-5" />
+                        <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                       </>
                     )}
                   </button>
 
                   {submitStatus === "error" && (
-                    <div className="flex items-center gap-2 text-red-500 text-sm font-medium justify-center mt-4">
+                    <div className="flex items-center gap-2 text-red-500 text-xs sm:text-sm font-medium justify-center mt-2 sm:mt-4">
                       <AlertCircle className="w-4 h-4" />
-                      Failed to send message. Please try again.
+                      Failed to send message.
                     </div>
                   )}
                 </form>

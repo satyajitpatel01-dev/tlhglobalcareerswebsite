@@ -9,7 +9,7 @@ export default function PortalShowcase() {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="bg-slate-900 rounded-[2.5rem] p-10 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center gap-16">
+        <div className="bg-slate-900 rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-10 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           
           {/* Light flare effects */}
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-3xl mix-blend-screen translate-x-1/3 -translate-y-1/3"></div>
@@ -41,13 +41,13 @@ export default function PortalShowcase() {
                </li>
             </ul>
 
-            <a href="https://portal.tlhglobalcareers.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-900 bg-white rounded-full shadow-lg hover:bg-slate-50 hover:-translate-y-0.5 transition-all outline-none">
+            <a href="https://portal.tlhglobalcareers.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-900 bg-white rounded-full shadow-lg hover:bg-slate-50 hover:-translate-y-0.5 transition-all outline-none w-full sm:w-auto">
               Go to Portal
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </div>
 
-          <div className="relative z-10 lg:w-1/2 w-full min-h-[450px]">
+          <div className="relative z-10 lg:w-1/2 w-full min-h-[350px] sm:min-h-[450px]">
              
              {/* Employer Portal Mock UI (Back) */}
              <motion.div 
@@ -90,17 +90,17 @@ export default function PortalShowcase() {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 0.8 }}
-               className="relative bg-slate-800 rounded-2xl border border-slate-600 shadow-2xl p-6 sm:w-[85%] z-10 sm:mt-16"
+               className="relative bg-slate-800 rounded-2xl border border-slate-600 shadow-2xl p-5 sm:p-6 sm:w-[85%] z-10 sm:mt-16"
              >
                 {/* Mock UI Header */}
-                <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-700">
+                <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 border-b border-slate-700">
                    <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-slate-700 overflow-hidden relative">
                          <Image src="https://ui-avatars.com/api/?name=Maria+Sanchez&size=100&background=random" alt="Avatar" fill referrerPolicy="no-referrer" className="object-cover" />
                       </div>
                       <div>
                          <p className="text-sm font-semibold text-white">Maria Sanchez</p>
-                         <p className="text-xs text-slate-400">Candidate ID: #8492</p>
+                         <p className="text-xs text-slate-400">ID: #8492</p>
                       </div>
                    </div>
                    <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 relative">
@@ -111,34 +111,34 @@ export default function PortalShowcase() {
 
                 {/* Mock UI Content */}
                 <div className="space-y-4">
-                   <div className="p-4 rounded-xl bg-slate-700/50 border border-slate-600">
+                   <div className="p-3 sm:p-4 rounded-xl bg-slate-700/50 border border-slate-600">
                       <div className="flex justify-between items-center mb-2">
-                         <span className="text-sm font-medium text-slate-200">Visa Application</span>
-                         <span className="text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded">Approved</span>
+                         <span className="text-xs sm:text-sm font-medium text-slate-200">Visa Application</span>
+                         <span className="text-[10px] sm:text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded">Approved</span>
                       </div>
-                      <div className="w-full bg-slate-800 rounded-full h-2">
-                         <div className="bg-green-400 h-2 rounded-full w-full"></div>
+                      <div className="w-full bg-slate-800 rounded-full h-1.5 sm:h-2">
+                         <div className="bg-green-400 h-1.5 sm:h-2 rounded-full w-full"></div>
                       </div>
                    </div>
                    
-                   <div className="p-4 rounded-xl bg-slate-700/50 border border-slate-600">
+                   <div className="p-3 sm:p-4 rounded-xl bg-slate-700/50 border border-slate-600">
                       <div className="flex justify-between items-center mb-2">
-                         <span className="text-sm font-medium text-slate-200">B2 Language Course</span>
-                         <span className="text-xs font-bold text-blue-400 bg-blue-400/10 px-2 py-1 rounded">In Progress</span>
+                         <span className="text-xs sm:text-sm font-medium text-slate-200">B2 Language Course</span>
+                         <span className="text-[10px] sm:text-xs font-bold text-blue-400 bg-blue-400/10 px-2 py-1 rounded">In Progress</span>
                       </div>
-                      <div className="w-full bg-slate-800 rounded-full h-2">
-                         <div className="bg-blue-400 h-2 rounded-full w-[60%]"></div>
+                      <div className="w-full bg-slate-800 rounded-full h-1.5 sm:h-2">
+                         <div className="bg-blue-400 h-1.5 sm:h-2 rounded-full w-[60%]"></div>
                       </div>
                    </div>
 
-                   <div className="grid grid-cols-2 gap-4 mt-6">
-                      <div className="p-4 rounded-xl bg-slate-700/30 border border-slate-600 border-dashed text-center">
-                         <FileText className="w-6 h-6 text-slate-400 mx-auto mb-2" />
-                         <span className="text-xs text-slate-400">Upload B1 Cert</span>
+                   <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6">
+                      <div className="p-3 sm:p-4 rounded-xl bg-slate-700/30 border border-slate-600 border-dashed text-center">
+                         <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 mx-auto mb-1.5 sm:mb-2" />
+                         <span className="text-[10px] sm:text-xs text-slate-400">Upload B1</span>
                       </div>
-                      <div className="p-4 rounded-xl bg-slate-700/30 border border-slate-600 text-center">
-                         <Building2 className="w-6 h-6 text-slate-400 mx-auto mb-2" />
-                         <span className="text-xs text-slate-400">Hospital Match</span>
+                      <div className="p-3 sm:p-4 rounded-xl bg-slate-700/30 border border-slate-600 text-center">
+                         <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 mx-auto mb-1.5 sm:mb-2" />
+                         <span className="text-[10px] sm:text-xs text-slate-400">Hospital Match</span>
                       </div>
                    </div>
                 </div>
