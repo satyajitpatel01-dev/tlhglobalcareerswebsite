@@ -69,13 +69,14 @@ export default function Hero() {
             className="relative lg:h-[600px] flex items-center justify-center"
           >
              <div className="relative w-full max-w-[500px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-               <Image 
-                 src="/images/hero-nurse.png" 
-                 alt="Professional Indian Nurse in Germany" 
-                 fill
-                 referrerPolicy="no-referrer"
-                 className="object-cover" 
-               />
+                <Image 
+                  src="/images/hero-nurse.png" 
+                  alt="Professional Indian Nurse in Germany" 
+                  fill
+                  referrerPolicy="no-referrer"
+                  className="object-cover" 
+                  priority
+                />
                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
                
                {/* Floating Cards */}

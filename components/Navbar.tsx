@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 relative rounded-full overflow-hidden shadow-lg group-hover:shadow-blue-500/25 transition-all">
-              <Image src="https://res.cloudinary.com/tlh01/image/upload/q_auto/f_auto/v1776471058/Round_Logo_nczoh2.png" alt="TLH Global Careers Logo" fill referrerPolicy="no-referrer" className="object-cover" />
+              <Image src="https://res.cloudinary.com/tlh01/image/upload/q_auto/f_auto/v1776471058/Round_Logo_nczoh2.png" alt="TLH Global Careers Logo" fill referrerPolicy="no-referrer" className="object-cover" priority />
             </div>
             <span className="font-bold text-lg sm:text-xl tracking-tight leading-none text-slate-900 group-hover:text-blue-700 transition-colors">
               TLH Global Careers

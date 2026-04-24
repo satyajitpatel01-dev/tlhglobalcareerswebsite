@@ -1,8 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | TLH Global Careers",
-  description: "Learn about our mission to empower global healthcare careers and our ethical recruitment process connecting talent with German employers.",
+  title: "About Us | Global Healthcare Recruitment Experts",
+  description: "Learn about TLH Global Careers, our ethical recruitment mission, and our leadership team dedicated to connecting global healthcare talent with German employers.",
+  openGraph: {
+    title: "About Us | TLH Global Careers",
+    description: "Learn about our mission to empower global healthcare careers and our ethical recruitment process.",
+    url: "https://tlhglobalcareers.com/about",
+  }
 };
 
 import Navbar from "@/components/Navbar";

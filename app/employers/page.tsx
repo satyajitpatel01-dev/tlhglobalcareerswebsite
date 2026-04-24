@@ -1,8 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hire Healthcare Professionals | TLH Global Careers",
-  description: "Connect with pre-screened, highly qualified nurses and healthcare professionals from around the world for your clinic or hospital in Germany.",
+  title: "Hire Healthcare Professionals | Recruitment Services for Germany",
+  description: "Connect with pre-screened, highly qualified nurses and healthcare professionals. We handle visa, language training, and relocation for your clinic in Germany.",
+  openGraph: {
+    title: "Hire Healthcare Professionals | TLH Global Careers",
+    description: "Connect with pre-screened, highly qualified nurses and healthcare professionals for your hospital in Germany.",
+    url: "https://tlhglobalcareers.com/employers",
+  }
 };
 
 import Navbar from "@/components/Navbar";

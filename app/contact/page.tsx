@@ -1,8 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | TLH Global Careers",
-  description: "Get in touch with TLH Global Careers. We support healthcare professionals and employers in Germany.",
+  title: "Contact Us | Start Your Healthcare Journey in Germany",
+  description: "Get in touch with TLH Global Careers. We support healthcare professionals with language training, visa processing, and job placement in Germany.",
+  openGraph: {
+    title: "Contact Us | TLH Global Careers",
+    description: "Get in touch with our team for healthcare recruitment and relocation services in Germany.",
+    url: "https://tlhglobalcareers.com/contact",
+  }
 };
 
 import Navbar from "@/components/Navbar";

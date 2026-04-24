@@ -89,10 +89,10 @@ export default function Footer() {
           <p className="text-slate-500 text-sm">
             © {new Date().getFullYear()} TLH Global Careers. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-white transition-colors">Imprint</Link>
+          <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-500">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms and Conditions</Link>
+            <Link href="/dmca" className="hover:text-white transition-colors">DMCA</Link>
           </div>
         </div>
       </div>
