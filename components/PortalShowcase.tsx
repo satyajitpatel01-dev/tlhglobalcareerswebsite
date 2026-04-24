@@ -15,7 +15,7 @@ export default function PortalShowcase() {
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-3xl mix-blend-screen translate-x-1/3 -translate-y-1/3"></div>
           
           <div className="relative z-10 lg:w-1/2">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">Explore Our Smart Portal</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-6">Explore Our Smart Portal</h2>
             <p className="text-slate-300 text-lg mb-8 leading-relaxed">
               Track visa status, upload documents, and communicate directly in real-time. Employers can browse our talent pool and track candidate progress seamlessly.
             </p>
@@ -90,7 +90,7 @@ export default function PortalShowcase() {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 0.8 }}
-               className="relative bg-slate-800 rounded-2xl border border-slate-600 shadow-2xl p-5 sm:p-6 sm:w-[85%] z-10 sm:mt-16"
+               className="relative bg-slate-800 rounded-2xl border border-slate-600 shadow-2xl p-4 sm:p-6 sm:w-[85%] z-10 sm:mt-16 mx-auto sm:mx-0"
              >
                 {/* Mock UI Header */}
                 <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 border-b border-slate-700">

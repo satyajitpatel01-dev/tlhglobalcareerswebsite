@@ -29,7 +29,7 @@ export default function Hero() {
               Your Journey to Germany Starts Here
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
               Build Your <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Career in Germany</span>
             </h1>
@@ -48,15 +48,15 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-8 border-t border-slate-200/60 pt-8 w-full sm:w-auto text-center sm:text-left">
+            <div className="mt-12 grid grid-cols-2 sm:flex sm:flex-row items-center justify-center sm:justify-start gap-4 sm:gap-8 border-t border-slate-200/60 pt-8 w-full sm:w-auto text-center sm:text-left">
                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-slate-900 mb-1">Proven Success</span>
-                  <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">in Healthcare Recruiting</span>
+                  <span className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">Proven Success</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase tracking-wider">in Healthcare Recruiting</span>
                </div>
                <div className="hidden sm:block w-px h-12 bg-slate-200"></div>
                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-slate-900 mb-1">Trusted Partners</span>
-                  <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">Across Germany</span>
+                  <span className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">Trusted Partners</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase tracking-wider">Across Germany</span>
                </div>
             </div>
           </motion.div>

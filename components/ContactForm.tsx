@@ -86,7 +86,7 @@ export default function ContactForm({
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
               {title}
             </h2>
             <p className="text-base sm:text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
@@ -95,7 +95,7 @@ export default function ContactForm({
 
             <div className="space-y-6 sm:space-y-8">
               <div className="flex items-center gap-4 sm:gap-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600 shrink-0">
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
@@ -105,7 +105,7 @@ export default function ContactForm({
               </div>
 
               <div className="flex items-center gap-4 sm:gap-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600 shrink-0">
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
