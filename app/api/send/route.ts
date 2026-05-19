@@ -12,7 +12,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'admin@tlhglobalcareers.com';
+    const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'info@tlhglobalcareers.com';
     const fromEmail = process.env.NEXT_PUBLIC_FROM_EMAIL || 'noreply@tlhglobalcareers.com';
 
     // 1. Send notification to Admin
